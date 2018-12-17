@@ -1,0 +1,32 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "taffrial-20181216214813-authRole",
+			"UnauthRoleArn": "arn:aws:iam::153553363350:role/taffrial-20181216214813-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::153553363350:role/taffrial-20181216214813-authRole",
+			"Region": "eu-west-1",
+			"DeploymentBucketName": "taffrial-20181216214813-deployment",
+			"UnauthRoleName": "taffrial-20181216214813-unauthRole",
+			"StackName": "taffrial-20181216214813",
+			"StackId": "arn:aws:cloudformation:eu-west-1:153553363350:stack/taffrial-20181216214813/49d04830-017c-11e9-9844-0abc187d3320"
+		}
+	},
+	"api": {
+		"ReportIncident": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"securityType": "API_KEY",
+				"GraphQLAPIIdOutput": "wnsd44ve3zgpvj45ox5gvac4tm",
+				"GraphQLAPIEndpointOutput": "https://q7bpaagrezg3fgl2cocnucjmky.appsync-api.eu-west-1.amazonaws.com/graphql",
+				"GraphQLAPIKeyOutput": "da2-ykmi4wx2hbepxppowk4scedeie"
+			},
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/taffrial-20181216214813-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+				"logicalId": "apiReportIncident"
+			},
+			"lastPushTimeStamp": "2018-12-17T01:30:25.832Z",
+			"lastPushDirHash": "S9+q9tKTH02dDRhFnCKMpRwvJ4k="
+		}
+	}
+}

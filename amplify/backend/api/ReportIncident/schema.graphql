@@ -1,0 +1,16 @@
+type Kira @model {
+	id: ID!
+	title: String!
+	reportedBy: String!
+	organization: String
+	email: AWSEmail
+	phone: String
+	date: AWSDate!
+	time: AWSTime
+	iMSI: String
+	iMEI: String
+	mSISDN: String
+	cGI: String
+	description: String
+	status: String!
+}

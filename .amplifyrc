@@ -1,0 +1,14 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "taffrial-20181216214813-authRole",
+            "UnauthRoleArn": "arn:aws:iam::153553363350:role/taffrial-20181216214813-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::153553363350:role/taffrial-20181216214813-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "taffrial-20181216214813-deployment",
+            "UnauthRoleName": "taffrial-20181216214813-unauthRole",
+            "StackName": "taffrial-20181216214813",
+            "StackId": "arn:aws:cloudformation:eu-west-1:153553363350:stack/taffrial-20181216214813/49d04830-017c-11e9-9844-0abc187d3320"
+        }
+    }
+}

@@ -1,0 +1,55 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateKira($input: CreateKiraInput!) {
+  createKira(input: $input) {
+    id
+    title
+    reportedBy
+    organization
+    email
+    phone
+    date
+    time
+    iMSI
+    iMEI
+    mSISDN
+    cGI
+    description
+    status
+  }
+}
+mutation UpdateKira($input: UpdateKiraInput!) {
+  updateKira(input: $input) {
+    id
+    title
+    reportedBy
+    organization
+    email
+    phone
+    date
+    time
+    iMSI
+    iMEI
+    mSISDN
+    cGI
+    description
+    status
+  }
+}
+mutation DeleteKira($input: DeleteKiraInput!) {
+  deleteKira(input: $input) {
+    id
+    title
+    reportedBy
+    organization
+    email
+    phone
+    date
+    time
+    iMSI
+    iMEI
+    mSISDN
+    cGI
+    description
+    status
+  }
+}

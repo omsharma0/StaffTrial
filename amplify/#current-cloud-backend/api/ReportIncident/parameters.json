@@ -1,0 +1,7 @@
+{
+    "AppSyncApiName": "ReportIncident",
+    "schemaGraphql": "s3://taffrial-20181216214813-deployment/amplify-appsync-files/schema.graphql.1545010102121",
+    "ResolverBucket": "taffrial-20181216214813-deployment",
+    "ResolverRootKey": "amplify-appsync-files",
+    "DeploymentTimestamp": "1545010102121"
+}

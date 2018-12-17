@@ -1,0 +1,156 @@
+type Kira {
+  id: ID!
+  title: String!
+  reportedBy: String!
+  organization: String
+  email: AWSEmail
+  phone: String
+  date: AWSDate!
+  time: AWSTime
+  iMSI: String
+  iMEI: String
+  mSISDN: String
+  cGI: String
+  description: String
+  status: String!
+}
+
+enum ModelSortDirection {
+  ASC
+  DESC
+}
+
+type ModelKiraConnection {
+  items: [Kira]
+  nextToken: String
+}
+
+input ModelStringFilterInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+}
+
+input ModelIDFilterInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+}
+
+input ModelIntFilterInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  contains: Int
+  notContains: Int
+  between: [Int]
+}
+
+input ModelFloatFilterInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  contains: Float
+  notContains: Float
+  between: [Float]
+}
+
+input ModelBooleanFilterInput {
+  ne: Boolean
+  eq: Boolean
+}
+
+input ModelKiraFilterInput {
+  id: ModelIDFilterInput
+  title: ModelStringFilterInput
+  reportedBy: ModelStringFilterInput
+  organization: ModelStringFilterInput
+  email: ModelStringFilterInput
+  phone: ModelStringFilterInput
+  date: ModelStringFilterInput
+  time: ModelStringFilterInput
+  iMSI: ModelStringFilterInput
+  iMEI: ModelStringFilterInput
+  mSISDN: ModelStringFilterInput
+  cGI: ModelStringFilterInput
+  description: ModelStringFilterInput
+  status: ModelStringFilterInput
+  and: [ModelKiraFilterInput]
+  or: [ModelKiraFilterInput]
+  not: ModelKiraFilterInput
+}
+
+type Query {
+  getKira(id: ID!): Kira
+  listKiras(filter: ModelKiraFilterInput, limit: Int, nextToken: String): ModelKiraConnection
+}
+
+input CreateKiraInput {
+  id: ID
+  title: String!
+  reportedBy: String!
+  organization: String
+  email: AWSEmail
+  phone: String
+  date: AWSDate!
+  time: AWSTime
+  iMSI: String
+  iMEI: String
+  mSISDN: String
+  cGI: String
+  description: String
+  status: String!
+}
+
+input UpdateKiraInput {
+  id: ID!
+  title: String
+  reportedBy: String
+  organization: String
+  email: AWSEmail
+  phone: String
+  date: AWSDate
+  time: AWSTime
+  iMSI: String
+  iMEI: String
+  mSISDN: String
+  cGI: String
+  description: String
+  status: String
+}
+
+input DeleteKiraInput {
+  id: ID
+}
+
+type Mutation {
+  createKira(input: CreateKiraInput!): Kira
+  updateKira(input: UpdateKiraInput!): Kira
+  deleteKira(input: DeleteKiraInput!): Kira
+}
+
+type Subscription {
+  onCreateKira: Kira @aws_subscribe(mutations: ["createKira"])
+  onUpdateKira: Kira @aws_subscribe(mutations: ["updateKira"])
+  onDeleteKira: Kira @aws_subscribe(mutations: ["deleteKira"])
+}
